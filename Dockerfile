@@ -17,3 +17,5 @@ RUN adduser --disabled-password \
     ${NB_USER}
 WORKDIR ${HOME}
 USER ${USER}
+
+RUN jupyter serverextension enable --py nbgitpuller --sys-prefix
