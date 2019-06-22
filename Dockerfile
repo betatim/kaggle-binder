@@ -1,9 +1,11 @@
 FROM gcr.io/kaggle-images/python:v60
 
-# install the notebook package
+# install the notebook and nbgitpuller packages
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook && \
     pip install --no-cache nbgitpuller
+
+RUN jupyter serverextension enable --py nbgitpuller --sys-prefix
 
 # create user with a home directory
 ARG NB_USER
@@ -17,5 +19,3 @@ RUN adduser --disabled-password \
     ${NB_USER}
 WORKDIR ${HOME}
 USER ${USER}
-
-RUN jupyter serverextension enable --py nbgitpuller --sys-prefix
