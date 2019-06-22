@@ -2,7 +2,8 @@ FROM gcr.io/kaggle-images/python:v60
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
-    pip install --no-cache notebook
+    pip install --no-cache notebook && \
+    pip install --no-cache nbgitpuller
 
 # create user with a home directory
 ARG NB_USER
