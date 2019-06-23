@@ -22,4 +22,4 @@ As an example the [this link](https://mybinder.org/v2/gh/betatim/kaggle-binder/m
 
 ## What libraries are included?
 
-Check out the (huge) `Dockerfile` from which the Kaggle kernels environment is built: https://github.com/Kaggle/docker-python/blob/master/Dockerfile. It probably contains the data science library you were thinkinng of using.
+Check out the (huge) `Dockerfile` from which the Kaggle kernels environment is built: https://github.com/Kaggle/docker-python/blob/master/Dockerfile. It probably contains the data science library you were thinking of using.
